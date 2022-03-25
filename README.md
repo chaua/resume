@@ -1,6 +1,6 @@
 # Resume
 
-Creates a resume website from ``.toml` files.
+Creates a resume website from `.toml` files.
 
 ## Build CSS
 
