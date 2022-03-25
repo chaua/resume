@@ -1,0 +1,20 @@
+{% if content.publications and content.publications.enable %}
+    <section>
+        <h1 id="{{ to_id(content.publications.title) }}">
+            {% if content.page.icon %}
+                <span class="icon"><i class="fas {{ content.publications.icon }}"></i></span>&nbsp;
+            {% endif %}
+            {{ content.publications.title }}
+        </h1>
+        {% for publication in content.publications.list %}
+            <h2>{{ publication.title }}</h2>
+            <ul class="publication-list">
+                {% for item in publication['items'] %}
+                    <li class="publication-item">{{ item.authors }}
+                        <b>{{ item.title }}</b> {{ item.publisher }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </section>
+{% endif %}

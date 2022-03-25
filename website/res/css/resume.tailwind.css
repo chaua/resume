@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply font-serif md:text-4xl text-2xl font-bold tracking-wider uppercase pt-10 pb-6;
+}
+
+h2 {
+    @apply font-serif md:text-2xl text-xl font-bold tracking-wide uppercase pb-6;
+}
+
+h3 {
+    @apply font-serif md:text-xl text-xl font-bold tracking-wide uppercase pb-6;
+}
+
+p {
+    @apply text-justify leading-5 ;
+}
+
+/* EXPERIENCES */
+.experience-block {
+    @apply grid grid-cols-4 gap-x-8 gap-y-0;
+}
+
+.experience-date {
+    @apply font-serif col-span-4 lg:col-span-1 font-light lg:text-right lg:text-base;
+}
+
+.experience-title {
+    @apply col-span-4 lg:col-start-2 lg:col-span-3 font-bold text-left;
+}
+
+.experience-description {
+    @apply font-serif col-span-4 lg:col-start-2 lg:col-span-3;
+}
+
+.experience-list {
+    @apply grid grid-cols-1 col-span-4 lg:col-start-2 lg:col-span-3 ml-6 list-disc gap-y-1 pt-2;
+}
+
+.experience-list-item {
+    @apply col-span-1 font-light text-sm text-justify tracking-wide;
+}
+
+
+/* PUBLICATIONS */
+
+.publication-list {
+    @apply grid grid-cols-1 gap-y-4 lg:col-start-2 lg:col-span-3 ml-6 list-disc gap-y-5 pb-8;
+}
+
+.publication-item {
+    @apply col-span-1 text-sm text-justify tracking-wide;
+}
+
+/* LANGUAGES */
+
+.language-block {
+    @apply grid grid-cols-4 gap-x-8 gap-y-2;
+}
+
+.language-label {
+    @apply font-sans col-span-4 lg:col-span-1 lg:text-right lg:text-base font-bold;
+}
+
+.language-description {
+    @apply font-serif col-span-4 lg:col-start-2 lg:col-span-3;
+}
+
+/* CERTIFICATIONS */
+
+.certification-block {
+    @apply grid grid-cols-4 gap-x-8 gap-y-2;
+}
+
+.certification-date {
+    @apply font-serif col-span-4 lg:col-span-1 font-light lg:text-right lg:text-base;
+}
+
+.certification-title {
+    @apply col-span-4 lg:col-start-2 lg:col-span-3 font-bold text-left;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements-block {
+    @apply grid grid-cols-4 gap-x-8;
+}
+
+.achievements-date {
+    @apply font-serif col-span-4 lg:col-span-1 font-light lg:text-right lg:text-base;
+}
+
+.achievements-title {
+    @apply col-span-4 lg:col-start-2 lg:col-span-3 font-bold text-left;
+}
+
+.achievements-description {
+    @apply font-serif col-span-4 lg:col-start-2 lg:col-span-3;
+}
+
+/* SKILLS */
+
+.skill-block {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8;
+}
+
+.skill-title {
+    @apply font-sans pb-2 text-sm;
+}
+
+/* PROFILE */
+
+.profile-header {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8;
+}
+
+.profile-bio {
+    @apply font-sans text-sm indent-0 grid grid-cols-1 gap-y-4;
+}
+
+.profile-title {
+    @apply font-serif text-white;
+}

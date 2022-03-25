@@ -1,0 +1,16 @@
+{% if content.certifications and content.certifications.enable %}
+    <section>
+        <h1 id="{{ to_id(content.certifications.title) }}">
+            {% if content.page.icon %}
+                <span class="icon"><i class="fas {{ content.certifications.icon }}"></i></span>&nbsp;
+            {% endif %}
+            {{ content.certifications.title }}
+        </h1>
+        <div class="certification-block">
+            {% for item in content.certifications.list %}
+                <p class="certification-date">{{ item.date }}</p>
+                <p class="certification-title">{{ item.certificate }}</p>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

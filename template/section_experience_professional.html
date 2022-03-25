@@ -1,0 +1,25 @@
+{% if content.professional_experience and content.professional_experience.enable %}
+    <section>
+        <h1 id="{{ to_id(content.professional_experience.title) }}">
+            {% if content.page.icon %}
+                <span class="icon"><i class="fas {{ content.professional_experience.icon }}"></i></span>&nbsp;
+            {% endif %}
+            {{ content.professional_experience.title }}
+        </h1>
+        {% for item in content.professional_experience.list %}
+            <div class="experience-block">
+                <p class="experience-date">{{ item.dates }}</p>
+                <p class="experience-title">{{ item.company }}</p>
+                <p class="experience-description">{{ item.position }}</p>
+                <ul class="experience-list">
+                    {% for description in item.description %}
+                        <li class="experience-list-item">{{ description }}</li>
+                    {% endfor %}
+                </ul>
+                {% if not loop.last %}
+                    <div class="col-span-full pb-4"></div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </section>
+{% endif %}

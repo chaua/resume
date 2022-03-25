@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Chauã Queirolo</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="res/css/resume.css"/>
+    <script type="text/javascript" src="res/js/lib-chau.js"></script>
+
+</head>
+
+<body style="hyphens: auto">
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-end py-2 px-4">
+        <a class="navbar-item">Português</a>
+        <a class="navbar-item">English</a>
+        <a class="navbar-item">Français</a>
+    </div>
+</nav>
+
+<main class="container px-6">
+    {% include '_section_profile.html' %}
+    {% include '_section_education.html' %}
+    {% include '_section_languages.html' %}
+    {% include '_section_certifications.html' %}
+    {% include '_section_skills.html' %}
+    {% include '_section_experience_professional.html' %}
+    {% include '_section_experience_academic.html' %}
+    {% include '_section_achievements.html' %}
+    {% include '_section_publications.html' %}
+</main>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>{{ content.page.footer }}</p>
+    </div>
+</footer>
+
+</body>
+
+</html>

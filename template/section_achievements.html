@@ -1,0 +1,20 @@
+{% if content.achievements and content.achievements.enable %}
+    <section>
+        <h1 id="{{ to_id(content.achievements.title) }}">
+            {% if content.page.icon %}
+                <span class="icon"><i class="fas {{ content.achievements.icon }}"></i></span>&nbsp;
+            {% endif %}
+            {{ content.achievements.title }}
+        </h1>
+        {% for item in content.achievements.list %}
+            <div class="achievements-block">
+                <p class="achievements-date">{{ item.date }}</p>
+                <p class="achievements-title">{{ item.award }}</p>
+                <p class="achievements-description">{{ item.location }}</p>
+                {% if not loop.last %}
+                    <div class="col-span-full pb-2"></div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </section>
+{% endif %}
